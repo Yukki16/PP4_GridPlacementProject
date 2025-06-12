@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class Cell : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Vector2 gridPosition { get; private set; }
 
-    // Update is called once per frame
-    void Update()
+    public GameObject placedObject;
+
+    //////More info of the cell to come;
+    //Floor type
+    //maybe even carpet.
+
+    public void Initialize(Vector2 position)
     {
-        
+        gridPosition = position;
+        name = $"Cell_x{gridPosition.x}_y{gridPosition.y}";
     }
 }
